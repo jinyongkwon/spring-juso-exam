@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<title>주소 입력 샘플</title>
+</head>
+
+<body>
+	<form action="/join" name="form" id="form" method="post">
+
+		<input type="button" onClick="goPopup();" value="주소찾기" />
+		<div id="list"></div>
+		<div id="callBackDiv">
+			<input type="text" style="width:500px;" id="roadFullAddr" name="roadFullAddr" />
+	</form>
+	<script>
+		function goPopup() {
+			var pop = window.open("/juso", "pop", "width=570,height=420, scrollbars=yes, resizable=yes");
+		}
+
+		function jusoCallBack(roadFullAddr) {
+			document.form.roadFullAddr.value = roadFullAddr;
+		}
+	</script>
+</body>
+
+</html>
