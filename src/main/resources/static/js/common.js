@@ -3,5 +3,6 @@ function goPopup() {
 }
 
 function jusoCallBack(roadFullAddr) {
-    document.form.roadFullAddr.value = roadFullAddr;
+    console.log("확인")
+    document.querySelector("#roadFullAddr").value = roadFullAddr;
 }
